@@ -1,0 +1,47 @@
+/* Water flame animation effects */
+
+.water-flame-cell {
+  background: linear-gradient(180deg, #1E3A8A 0%, #1D4ED8 50%, #2563EB 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.water-flame-cell::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.1) 0%,
+      transparent 70%
+    );
+  animation: ripple 4s ease-in-out infinite;
+}
+
+.water-flame-cell:hover .water-drop {
+  animation-duration: 1.5s !important;
+}
+
+@keyframes ripple {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}

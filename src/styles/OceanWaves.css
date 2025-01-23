@@ -1,0 +1,52 @@
+/* Ocean waves animation effects */
+.ocean-background {
+    position: relative;
+    z-index: 0;
+  }
+  
+  .ocean-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(30, 58, 138, 0.1) 0%,
+      rgba(30, 58, 138, 0.05) 100%
+    );
+    pointer-events: none;
+  }
+  
+  .wave-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Add shimmer effect to foam */
+  .foam-effects circle {
+    filter: blur(1px);
+  }
+  
+  /* Add depth to waves */
+  .wave-depth {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(30, 58, 138, 0.1) 100%
+    );
+    pointer-events: none;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+  }
+  
+  .animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
