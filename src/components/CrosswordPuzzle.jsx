@@ -6,7 +6,7 @@ import { emotionalVocab } from '../data/VocabData4';
 import puzzleGenerator from '../services/PuzzleGeneratorService';
 import { useCellRevealAnimation, useSuccessAnimation, animationClasses } from '../utils/animations';
 import WaterFlame from './WaterFlame';
-import '../styles/waterFlame.css';
+import '../styles/WaterFlame.css';
 import OceanWaves from './OceanWaves';
 import '../styles/OceanWaves.css';
 
